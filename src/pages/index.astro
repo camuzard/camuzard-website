@@ -1,0 +1,90 @@
+---
+import "../styles/global.css";
+---
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Léo Camuzard - CV</title>
+	<script src="/script.js" defer></script>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500">
+	<div class="relative min-h-screen flex flex-col items-center justify-center px-6 py-12">
+	  <button id="darkModeButton" class="fixed top-4 right-4 z-50 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-4 py-2 rounded-full shadow-lg hover:opacity-90 transition-all">Dark Mode</button>
+  
+	  <div id="mainContent" class="parallax w-full max-w-4xl p-8 rounded-3xl shadow-glass backdrop-blur-md bg-white/10 dark:bg-white/5 border border-white/20">
+		<header class="text-center mb-12 fade-up">
+		  <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-hero-gradient">Léo Camuzard</h1>
+	  <p class="text-xl text-secondary mt-2"><b>Senior DevOps Engineer</b></p>
+		</header>
+  
+		<section class="mb-10 fade-up">
+		  <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2">About Me</h2>
+		  <p class="text-lg leading-relaxed">A passionate Senior DevOps engineer specializing in Kubernetes, automation, and cloud infrastructure. Enthusiastic about GitOps workflows and Kubernetes controller development.</p>
+		</section>
+  
+		<section class="mb-10 fade-up">
+		  <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2">Experience</h2>
+		  <div class="mb-6">
+				  <h3 class="text-2xl font-medium text-primary">Senior DevOps Engineer – OpenBet, London</h3>
+		  <p class="text-secondary mt-3"><b>2021 – now</b></p>
+				  <p class="text-lg mt-5">• Led the design and operation of <b>EKS</b>-based Kubernetes clusters, including networking with <b>Cilium</b>, autoscaling, RBAC, <b>Kyverno</b> policies, and upgrade strategies.</p>
+				  <p class="text-lg mt-2">• Built and maintained <b>Infrastructure-as-Code</b> with <b>Terraform</b> for <b>AWS</b> services like: EKS, EC2, VPC, RDS, S3, IAM, Route 53, SNS, and ECR.</p>
+				  <p class="text-lg mt-2">• Developed and maintained <b>Kubernetes Operators</b> in <b>Go</b> to automate infrastructure and application lifecycle tasks.</p>
+				  <p class="text-lg mt-2">• Implemented <b>GitOps</b> workflows using <b>ArgoCD</b>, reducing deployment errors and increasing release reliability.</p>
+				  <p class="text-lg mt-2">• Supported system observability using <b>Prometheus</b>, <b>Grafana</b>, and <b>Alertmanager</b>; involved in on-call rotations and incident response.</p>
+				  <p class="text-lg mt-2">• Created internal automation tooling in <b>Python</b> to support platform and developer operations.</p>
+				  <p class="text-lg mt-2">• Collaborated closely with backend and product teams to support feature rollout, infrastructure performance tuning, and reliability improvements.</p>
+				  <p class="text-lg mt-2">• Supported developers by containerizing applications, authoring <b>Helm</b> charts, and integrating with our internal image registry (<b>Harbor</b>).</p>
+  
+				  <h3 class="text-2xl font-medium text-primary mt-8">DevOps Engineer – Light & Wonder, London</h3>
+		  <p class="text-secondary mt-3"><b>2018 – 2021</b></p>
+				  <p class="text-lg mt-5">• Designed and maintained complex infrastructures with <b>Terraform</b>, in <b>AWS</b>, <b>VMware</b> / NSX, managing hundreds of instances across dev, staging, and production.</p>
+				  <p class="text-lg mt-2">• Implemented <b>CI/CD</b> pipelines with Groovy Libraries for <b>Jenkins</b>.</p>
+				  <p class="text-lg mt-2">• Developed automation tools in <b>Python</b> using OOP, pyproject.</p>toml, unittests, functional testing.</p>
+				  <p class="text-lg mt-2">• Managed EKS clusters with <b>Terraform</b> and <b>Helm</b>.</p>
+				  <p class="text-lg mt-2">• Strengthened platform security by integrating <b>Vault</b>, SELinux and encrypted connections.</p>
+				  <p class="text-lg mt-2">• Configured and maintained Centos servers for AWS and VMware to run applications such as webapps (Apache, Nginx), databases (Informix, PostgreSQL), Java applications.</p>
+				  <p class="text-lg mt-2">• Helped developers to deploy their applications with <b>Ansible</b>.</p>
+				  <p class="text-lg mt-2">• Adopted SAFe with Scrum to increase delivery predictability and alignment across teams.</p>
+				  <p class="text-lg mt-2">• Participated in the 24/7 on-call rotation for incident response in production environments.</p>
+  
+				  <h3 class="text-2xl font-medium text-primary mt-8">Sotfware Integrator - CGI, Paris</h3>
+		  <p class="text-secondary mt-3"><b>2015 – 2018</b></p>
+				  <p class="text-lg mt-5">I did a three year apprenticeship as a software integrator for CGI. My main tasks were:</p>
+				  <p class="text-lg mt-2">• Automation of the environment deployments with <b>Jenkins, Ansible, Docker, Shell scripting, Gitlab</b>.</p>
+				  <p class="text-lg mt-2">• Deployment and maintenance of hundreds of environments for integration and acceptance with <b>Redhat 7, Weblogic/Embedded, Oracle, eldap, Batch</b></p>
+				  <p class="text-lg mt-2">• Support for different technical teams</p>
+		  </div>
+		</section>
+  
+		<section class="mb-10 fade-up">
+		  <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2">Skills</h2>
+		  <ul class="grid grid-cols-2 sm:grid-cols-2 gap-4 text-lg">
+			<li class="bg-amber-100 dark:bg-white/10 p-6 sm:p-4 rounded-xl text-center hover:scale-105 transition-transform">Kubernetes & Docker</li>
+			<li class="bg-amber-100 dark:bg-white/10 p-6 sm:p-4 rounded-xl text-center hover:scale-105 transition-transform">GitOps (ArgoCD)</li>
+			<li class="bg-amber-100 dark:bg-white/10 p-6 sm:p-4 rounded-xl text-center hover:scale-105 transition-transform">Programming (Python, Go)</li>
+			<li class="bg-amber-100 dark:bg-white/10 p-6 sm:p-4 rounded-xl text-center hover:scale-105 transition-transform">CI/CD Pipelines</li>
+			<li class="bg-amber-100 dark:bg-white/10 p-6 sm:p-4 rounded-xl text-center hover:scale-105 transition-transform">Cloud Infrastructure (AWS)</li>
+			<li class="bg-amber-100 dark:bg-white/10 p-6 sm:p-4 rounded-xl text-center hover:scale-105 transition-transform">Infrastructure as Code (Terraform, Ansible)</li>
+		  </ul>
+		</section>
+  
+		<section class="mb-10 fade-up">
+		  <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2">Education</h2>
+		  <div class="mb-6">
+			<h3 class="text-2xl font-medium text-primary">Master's Degree in Computer Science, Paris</h3>
+		<p class="text-secondary"><b>ESGI, 2018</b></p>
+			<p class="text-lg mt-2">Specialized in Network, Systems, and Cloud Computing. Completed a 3-year apprenticeship while studying.</p>
+		  </div>
+		</section>
+  
+		<section class="text-center fade-up">
+		  <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2">Contact</h2>
+		  <p class="text-lg">Email: <a href="mailto:leo@example.com" class="text-primary hover:underline">leo.camuzard@gmail.com</a></p>
+		  <p class="text-lg">LinkedIn: <a href="https://linkedin.com/in/camuzard" class="text-primary hover:underline">linkedin.com/in/camuzard</a></p>
+		</section>
+	  </div>
+	</div>
+</body>
