@@ -7,9 +7,17 @@ import "../styles/global.css";
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Léo Camuzard - CV</title>
   <script src="/script.js" defer></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
-<body class="font-sans bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500 overflow-x-hidden">
+<body x-data="{ skill: null, descriptions1: {
+  'Kubernetes & Docker': 'I have worked closely with Docker and Kubernetes for the past 6 years. My experience includes managing EKS clusters, writing Helm charts, writing custom Operators, and deploying containerized applications.',
+  'GitOps (ArgoCD)': 'Over the past 3 years, I have designed GitOps workflows using ArgoCD, including the development of custom ArgoCD plugins in Python to extend its capabilities.',
+  'Programming (Python, Go)': 'I have written and maintained complex Python applications for 9 years, using OOP, pyproject.toml, testing frameworks, and functional design. My Go experience focuses on developing Kubernetes controllers and building web APIs with Swagger documentation.',
+  'CI/CD Pipelines': 'I have built and maintained pipelines with Jenkins (Groovy), ArgoCD, and GitHub Actions, enabling reliable and automated delivery.',
+  'Cloud Infrastructure (AWS)': 'For the past 6 years, I have deployed scalable, production-grade infrastructure in AWS, including networking, compute, storage, and IAM components.',
+  'Infrastructure as Code (Terraform)': 'I have been using Terraform for 6 years to manage platform infrastructure, primarily targeting AWS with reusable, modular configurations.'
+} }" class="font-sans bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-500 overflow-x-hidden">
   <div class="relative min-h-screen flex flex-col items-center justify-center px-6 py-12">
     <button id="darkModeButton" class="fixed top-4 right-4 z-50 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white px-4 py-2 rounded-full shadow-lg hover:opacity-90 transition-all">
       Dark Mode
@@ -66,12 +74,13 @@ import "../styles/global.css";
       <section class="mb-10 fade-up">
         <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2">Skills</h2>
         <ul class="grid grid-cols-2 sm:grid-cols-2 gap-4 text-lg">
-          <li class="bg-amber-100 dark:bg-white/10 p-6 sm:p-4 rounded-xl text-center hover:scale-105 transition-transform">Kubernetes & Docker</li>
-          <li class="bg-amber-100 dark:bg-white/10 p-6 sm:p-4 rounded-xl text-center hover:scale-105 transition-transform">GitOps (ArgoCD)</li>
-          <li class="bg-amber-100 dark:bg-white/10 p-6 sm:p-4 rounded-xl text-center hover:scale-105 transition-transform">Programming (Python, Go)</li>
-          <li class="bg-amber-100 dark:bg-white/10 p-6 sm:p-4 rounded-xl text-center hover:scale-105 transition-transform">CI/CD Pipelines</li>
-          <li class="bg-amber-100 dark:bg-white/10 p-6 sm:p-4 rounded-xl text-center hover:scale-105 transition-transform flex items-center justify-center">Cloud Infrastructure (AWS)</li>
-          <li class="bg-amber-100 dark:bg-white/10 p-6 sm:p-4 rounded-xl text-center hover:scale-105 transition-transform">Infrastructure as Code (Terraform, Ansible)</li>
+          <template x-for="label in Object.keys(descriptions1)" :key="label">
+            <li
+              @click="skill = label"
+              class="flex items-center justify-center text-center bg-amber-100 dark:bg-white/10 p-4 rounded-xl hover:scale-105 transition-transform cursor-pointer"
+              x-text="label"
+            ></li>
+          </template>
         </ul>
       </section>
 
@@ -91,4 +100,15 @@ import "../styles/global.css";
       </section>
     </div>
   </div>
+
+  <!-- Skill Modal outside scrollable content -->
+  <template x-if="skill">
+    <div class="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+      <div class="bg-white dark:bg-gray-800 text-black dark:text-white rounded-xl p-6 w-full max-w-md mx-4">
+        <h3 class="text-xl font-semibold mb-2" x-text="skill"></h3>
+        <p class="text-sm mb-4" x-text="descriptions1[skill]"></p>
+        <button @click="skill = null" class="text-primary hover:underline text-sm">Close</button>
+      </div>
+    </div>
+  </template>
 </body>
