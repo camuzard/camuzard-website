@@ -3,10 +3,14 @@
 @tailwind utilities;
 
 .parallax {
-    transform: perspective(1000px)
-      rotateX(calc((50 - var(--mouse-y, 50px) / 100vh * 100) * 0.05deg))
-      rotateY(calc((var(--mouse-x, 50px) / 100vw * 100 - 50) * 0.05deg));
+    transform: perspective(1000px) rotateX(calc((50 - var(--mouse-y, 50px) / 100vh * 100) * 0.05deg)) rotateY(calc((var(--mouse-x, 50px) / 100vw * 100 - 50) * 0.05deg));
     transition: transform 0.1s;
+}
+
+@media (pointer: coarse) {
+    .parallax {
+        transform: none !important;
+    }
 }
 
 .fade-up {
