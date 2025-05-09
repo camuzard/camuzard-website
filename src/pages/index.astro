@@ -24,23 +24,24 @@ import "../styles/global.css";
     </button>
 
     <div id="mainContent" class="parallax w-full max-w-4xl p-8 rounded-3xl shadow-glass backdrop-blur-md bg-white/10 dark:bg-white/5 border border-white/20">
+
       <header class="text-center mb-12 fade-up">
-        <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-hero-gradient">Léo Camuzard</h1>
-        <p class="text-xl text-secondary mt-2"><b>Senior DevOps Engineer</b></p>
+        <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-hero-gradient transition-transform hover:scale-105">Léo Camuzard</h1>
+        <p class="text-xl text-secondary mt-2 hover:scale-105"><b>Senior DevOps Engineer</b></p>
       </header>
 
       <section class="mb-10 fade-up">
-        <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2">About Me</h2>
+        <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2 transition-transform hover:tracking-wide">About Me</h2>
         <p class="text-lg leading-relaxed">
           A passionate Senior DevOps engineer specializing in Kubernetes, automation, and cloud infrastructure. Enthusiastic about GitOps workflows and Kubernetes controller development.
         </p>
       </section>
 
       <section class="mb-10 fade-up">
-        <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2">Experience</h2>
+        <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2 transition-transform hover:tracking-wide">Experience</h2>
         <div class="mb-6">
-          <h3 class="text-2xl text-primary font-bold">Senior DevOps Engineer – OpenBet, London</h3>
-          <p class="text-secondary mt-3 font-bold">2021 – now</p>
+          <h3 class="text-2xl text-primary font-bold transition-transform hover:tracking-wide">Senior DevOps Engineer – OpenBet, London</h3>
+          <p class="text-secondary mt-3 font-bold transition-transform hover:tracking-wide">2021 – now</p>
           <p class="text-lg mt-5">• Led the design and operation of <b>EKS</b>-based Kubernetes clusters, including networking with <b>Cilium</b>, autoscaling, RBAC, <b>Kyverno</b> policies, and upgrade strategies.</p>
           <p class="text-lg mt-2">• Built and maintained <b>Infrastructure-as-Code</b> with <b>Terraform</b> for <b>AWS</b> services like: EKS, EC2, VPC, RDS, S3, IAM, Route 53, SNS, and ECR.</p>
           <p class="text-lg mt-2">• Developed and maintained <b>Kubernetes Operators</b> in <b>Go</b> to automate infrastructure and application lifecycle tasks.</p>
@@ -50,8 +51,8 @@ import "../styles/global.css";
           <p class="text-lg mt-2">• Collaborated closely with backend and product teams to support feature rollout, infrastructure performance tuning, and reliability improvements.</p>
           <p class="text-lg mt-2">• Supported developers by containerizing applications, authoring <b>Helm</b> charts, and integrating with our internal image registry (<b>Harbor</b>).</p>
 
-          <h3 class="text-2xl font-bold text-primary mt-8">DevOps Engineer – Light & Wonder, London</h3>
-          <p class="text-secondary mt-3 font-bold">2018 – 2021</p>
+          <h3 class="text-2xl font-bold text-primary mt-8 transition-transform hover:tracking-wide">DevOps Engineer – Light & Wonder, London</h3>
+          <p class="text-secondary mt-3 font-bold transition-transform hover:tracking-wide">2018 – 2021</p>
           <p class="text-lg mt-5">• Designed and maintained complex infrastructures with <b>Terraform</b>, in <b>AWS</b>, <b>VMware</b> / NSX, managing hundreds of instances across dev, staging, and production.</p>
           <p class="text-lg mt-2">• Implemented <b>CI/CD</b> pipelines with Groovy Libraries for <b>Jenkins</b>.</p>
           <p class="text-lg mt-2">• Developed automation tools in <b>Python</b> using OOP, pyproject.toml, unittests, functional testing.</p>
@@ -62,8 +63,8 @@ import "../styles/global.css";
           <p class="text-lg mt-2">• Adopted SAFe with Scrum to increase delivery predictability and alignment across teams.</p>
           <p class="text-lg mt-2">• Participated in the 24/7 on-call rotation for incident response in production environments.</p>
 
-          <h3 class="text-2xl font-bold text-primary mt-8">Software Integrator - CGI, Paris</h3>
-          <p class="text-secondary mt-3 font-bold">2015 – 2018</p>
+          <h3 class="text-2xl font-bold text-primary mt-8 transition-transform hover:tracking-wide">Software Integrator - CGI, Paris</h3>
+          <p class="text-secondary mt-3 font-bold transition-transform hover:tracking-wide">2015 – 2018</p>
           <p class="text-lg mt-5">I did a three year apprenticeship as a software integrator for CGI. My main tasks were:</p>
           <p class="text-lg mt-2">• Automation of the environment deployments with <b>Jenkins, Ansible, Docker, Shell scripting, Gitlab</b>.</p>
           <p class="text-lg mt-2">• Deployment and maintenance of hundreds of environments for integration and acceptance with <b>Redhat 7, Weblogic/Embedded, Oracle, eldap, Batch</b>.</p>
@@ -72,7 +73,7 @@ import "../styles/global.css";
       </section>
 
       <section class="mb-10 fade-up">
-        <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2">Skills</h2>
+        <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2 transition-transform hover:tracking-wide">Skills</h2>
         <ul class="grid grid-cols-2 sm:grid-cols-2 gap-4 text-lg">
           <template x-for="label in Object.keys(descriptions1)" :key="label">
             <li
@@ -85,16 +86,16 @@ import "../styles/global.css";
       </section>
 
       <section class="mb-10 fade-up">
-        <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2">Education</h2>
+        <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2 transition-transform hover:tracking-wide">Education</h2>
         <div class="mb-6">
-          <h3 class="text-2xl font-bold text-primary">Master's Degree in Computer Science, Paris</h3>
-          <p class="text-secondary font-bold">ESGI, 2018</p>
+          <h3 class="text-2xl font-bold text-primary transition-transform hover:tracking-wide">Master's Degree in Computer Science, Paris</h3>
+          <p class="text-secondary font-bold transition-transform hover:tracking-wide">ESGI, 2018</p>
           <p class="text-lg mt-2">Specialized in Network, Systems, and Cloud Computing. Completed a 3-year apprenticeship while studying.</p>
         </div>
       </section>
 
       <section class="text-center fade-up">
-        <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2">Contact</h2>
+        <h2 class="text-3xl font-semibold mb-4 border-b border-primary pb-2 transition-transform hover:tracking-wide">Contact</h2>
         <p class="text-lg">Email: <a href="mailto:leo@example.com" class="text-primary hover:underline">leo.camuzard@gmail.com</a></p>
         <p class="text-lg">LinkedIn: <a href="https://linkedin.com/in/camuzard" class="text-primary hover:underline">linkedin.com/in/camuzard</a></p>
       </section>

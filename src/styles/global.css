@@ -23,3 +23,8 @@
     opacity: 1;
     transform: none;
 }
+
+::selection {
+    background-color: #9333ea; /* Tailwind purple-600 */
+    color: white;
+}
