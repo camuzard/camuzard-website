@@ -10,13 +10,14 @@ function toggleDarkMode() {
 
 window.addEventListener('DOMContentLoaded', () => {
     console.log('dark mode ho');
-    isDark = localStorage.getItem('theme') === 'dark';
+    const savedTheme = localStorage.getItem('theme');
+    isDark = savedTheme === 'dark' || savedTheme === null; // default to dark
     document.documentElement.classList.toggle('dark', isDark);
 
     const btn = document.getElementById('darkModeButton');
     if (btn) {
         btn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
-        btn.addEventListener('click', toggleDarkMode); // ← this is the key line
+        btn.addEventListener('click', toggleDarkMode);
     }
 
     document.addEventListener('mousemove', (e) => {
